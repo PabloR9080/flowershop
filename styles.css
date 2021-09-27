@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f2f2f2;
+}
+body{
+    background-image: url(img/backgrev.jpg);
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "contentg contentg contentg contentg"
+    "footer footer footer footer";
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    background-color: #E4A0F7;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header p.title{
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    margin-left: 10px;
+    font-size: 32px;
+    font-weight: 600;
+}
+.header p.title::selection{
+    color: red;
+}
+.header > ul{
+    display: inline-flex;
+    
+}
+.header > ul > a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+} 
+.header > ul > a > li{
+    list-style: none;
+    border: 3px solid #af6dc0;
+    text-align: center;
+    padding: 25px;
+    width: 100px;
+    transition: all 0.2s ease-in;
+}
+.header > ul > a > li:hover{
+    border: 3px solid black;
+    padding: 30px;
+    color: white;
+    background-color: #d850fd;
+}
+.ico-search{
+    margin-right: -2px;
+}
+input[type="text"]{
+    border: 2px solid #121212;
+    height: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2px;
+}
+input[type="text"]:focus{
+    border: 2px solid #121212;
+    background-color: #f2f2f2;
+    height: 20px;
+    color: #141414;
+    
+}
+.search{
+    margin-right: 50px;
+    color: #121212;
+}
+.search > p{
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+
+.main-grid{
+    grid-area: contentg;
+    height: 70vh;
+    margin-top: 5px;
+    background-color: #f2f2f2;
+    background-image: url(img/backg.jpg);
+    background-repeat: no-repeat;
+   
+}
+.main-grid > .bttns{
+    display: none;
+}
+.info h1{
+    color:#141414;
+    margin-top: 50px;
+    text-align: center;
+}
+.info-card{
+    float: left;
+    margin-top: 10%;
+    margin-left: 30%;
+    width: 40%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.info-card p{
+    color: #141414;
+    font-weight: 600;
+    margin: 10px;
+    line-height: 2;
+    text-align: justify;
+}
+.footer-grid{
+    display: flex;
+    grid-area: footer;
+    height: 10vh;
+    width: 99.4vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+}
+.footer-grid p{
+    text-align: center;
+}
+
+.block{
+    display: none;
+    
+}
+@media print{
+    .block{
+        display: block;
+        display: flex;
+        
+
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+}
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .grid-container{
+        width: 100vw;
+    }
+    .header > ul{
+        display: none;    
+    }
+    .header{
+        grid-area: header;
+        display: flex;
+        background-color: #E4A0F7;
+        height: 110px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .search{
+        display: none;
+    }
+    .main-grid{
+        height: 45vh;
+        width: 100%;
+        margin: -5px 0 5px 0px;
+        background-color: #f2f2f2;
+        background-image: url(img/backg.jpg);
+        background-repeat: no-repeat;
+    }
+    .info{
+        display: none;
+    }
+    .main-grid  .bttns{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .bttns ul{
+        list-style:url(img/icons/flower.png);
+    }
+    .bttns  a {
+        text-decoration: none;
+        color: #121212;
+    }
+
+    .bttns li{
+        margin-top: 8vmin;
+        margin-bottom: 5vmin;
+        font-weight: bolder;
+        font-size: 2.5vmax;
+    }
+    .bttns li:active{
+        background-color: white;
+    }
+    .footer-grid{
+        margin-top: -10px;
+        width: 100vw;
+    }
+}
