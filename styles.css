@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 :root{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #f2f2f2;
@@ -25,6 +26,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 .header p.title{
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
@@ -42,7 +44,7 @@ body{
 .header > ul > a{
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
 } 
 .header > ul > a > li{
     list-style: none;
@@ -83,7 +85,6 @@ input[type="text"]:focus{
     font-size: 15px;
 }
 
-
 .main-grid{
     grid-area: contentg;
     height: 70vh;
@@ -103,18 +104,127 @@ input[type="text"]:focus{
 }
 .info-card{
     float: left;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 30%;
     width: 40%;
-    height: 20%;
+    height: 25%;
+    overflow-y: scroll;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
+    border-bottom: 0px solid black;
 }
 .info-card p{
     color: #141414;
     font-weight: 600;
     margin: 10px;
-    line-height: 2;
+    line-height: 3;
     text-align: justify;
+}
+.info-card:hover{
+    border-bottom: 5px solid black;
+}
+
+.catal-card{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+.frame{
+    cursor: pointer;
+    height: 40%;
+    width: 30%;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin-left: 35%;
+    margin-top: 10px;
+    margin-bottom: 2%;
+  }
+.description{
+    display: none;
+    background-color: #141414;
+    border: 30px solid #006d77;
+    color: aliceblue;
+    text-align: center;
+    line-height: 2;
+    font-size: 1em;
+    transition: all 0.5s ease-out;
+    min-height: 45%;
+}
+.description::first-line{
+    color: #B4CBD9;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 4;
+}
+.txt-center{
+    text-align: center;
+}
+.txtinfo{
+    color: black;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 3vmin;
+    font-weight: bold;
+}
+.card{
+    flex: 1 1 auto;
+    overflow-y: auto;
+    height: 98%;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    background-color: #FBE4BF;
+    box-shadow: 5px 5px 10px #141414;
+    overflow: hidden scroll;
+}
+.card:hover .description{
+    display: block;
+    height: auto;
+}
+.card:hover .txtinfo{
+    display: none;
+    height: auto;
+}
+
+.frm{
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.frm > form >p.frm-info{
+    color:#141414;
+    font-weight: 600;
+    line-height: 2;
+}
+.frm textarea{
+    resize: none;
+    width: 400px;
+}
+.frm :required{
+    background-color: rgba(255, 0, 0, 0.5)
+}
+.titulo{
+    color: #141414;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+.titulo::first-line{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 2;
 }
 .footer-grid{
     display: flex;
@@ -133,6 +243,15 @@ input[type="text"]:focus{
     display: none;
     
 }
+
+.scrll::-webkit-scrollbar {
+    width: 5px; 
+  }
+.scrll::-webkit-scrollbar-thumb {
+    background: #141414;
+    border-radius: 10%;
+  }
+
 @media print{
     .block{
         display: block;
@@ -206,4 +325,41 @@ input[type="text"]:focus{
         margin-top: -10px;
         width: 100vw;
     }
+    .card{
+        flex-basis: 100%;
+        height: 100%;
+        width: 100%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        background-color: #FBE4BF;
+        box-shadow: 5px 5px 10px #141414;
+        overflow: hidden;
+    }
+    .info-card{
+        display: none;
+    }
+
+    .description{
+        display: block;
+        border: 5px solid #006d77;
+        height: auto;
+    }
+    .description::first-line{
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .txtinfo{
+        display: none;
+        height: auto;
+    }
+    .frame{
+        height: 40%;
+        width: 50%;
+        margin-left: 27%;
+        margin-top: 10px;
+        margin-bottom: 2%;
+      }
+    
 }

@@ -4,30 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Comentarios</title>
 </head>
 <body>
-    <div class="center menu no-scroll">
-        <h3 >¡Envianos tus comentarios!</h3>
+    <div class="grid-container">
+        <div class="header"> 
+            <p class="title">JYF</p>
+            <ul>
+                <a href="catalogo.html"><li>Catalogo</li></a>
+                <a href="personalizar.html"><li>Personalizar</li></a>
+                <a href="comentarios.html"><li>Comentarios</li></a>
+            </ul>
 
-        <form class="frm">
-            <p class="frm-info">Correo: </p>
-            <input type="email" name="Email:" id="" class="frm-elm">
-            <br>
-            <p class="frm-info">Nombre: </p>
-            <input type="text" name="" id="" class="frm-elm" required>
-            <br>
-            <p class="frm-info">Asunto: </p>
-            <input type="text" name="" id="" class="frm-elm" required>
-            <br>
-            <p class="frm-info">Descripción del problema:</p>
-            <textarea rows="10" cols="30" class="frm-elm cmmnt" placeholder="Ingrese un comentario"></textarea>
-            <input type="submit" value="Enviar" class="frm-elm btn">
-        </form>
-        <a href="index.html"><button class="frm-elm btn-v" onclick="none">Volver</button></a>
+            <div class="search">
+                <span class="ico-search"><img src="img/icons/search.png" width="12px" height="12px"> Buscar:</span>
+                <input type="text" name="busqueda" autocomplete="off">
 
+            </div> 
+            
+        </div>
 
+        <div class="main-grid">
+            <p class="titulo">¡Envianos tus comentarios! <br>Por favor rellena los campos requeridos (fondo rojo) </p>
+                <div class="frm">
+                    
+                    <form class="">
+                        <p class="frm-info">Correo: </p>
+                        <input type="email" name="Email:" id="" class="frm-elm">
+                        <br>
+                        <p class="frm-info">Nombre: </p>
+                        <input type="text" name="" id="" required>
+                        <br>
+                        <p class="frm-info">Asunto: </p>
+                        <input type="text" name="" id="" required>
+                        <br>
+                        <p class="frm-info">Descripción del problema:</p>
+                        <textarea rows="10" cols="30" placeholder="Ingrese un comentario"></textarea>
+                        <br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    
+            </div>
+            <a href="index.html"><button class="frm-elm btn-v" onclick="none">Volver</button></a>
+    </div>
+    <div class="footer-grid">
+        <p>Creada con 😎 por Pablo Rosas Marin</p>
+    </div>
     </div>
 </body>
 </html>
