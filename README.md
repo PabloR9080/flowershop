@@ -3,6 +3,6 @@
 Bienvenido a la tienda de flores 馃槃
 
 # ~~ WIP ~~
-- P醙ina de personalizaci贸n
-- P醙ina de informaci贸n sobre las flores
+- P谩gina de personalizaci贸n
+- P谩gina de informaci贸n sobre las flores
 - Detalles con la compatibilidad movil
