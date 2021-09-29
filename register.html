@@ -8,25 +8,57 @@
     <title>Registro</title>
 </head>
 <body>
-    <div class="center menu no-scroll">
-        <h3 >Forma parte del sitio en linea.</h3>
+    <main>
 
-        <form class="frm">
-            <p class="frm-info">Nombre: </p>
-            <input type="text" name="name:" placeholder="Nombre" class="frm-elm" required>
-            <br>
-            <p class="frm-info">Apellido: </p>
-            <input type="text" name="last-name" placeholder="Apellido" class="frm-elm" required>
-            <br>
-            <p class="frm-info">Dirección:</p>
-            <input type="text" placeholder="Dirección" class="frm-elm" required> 
-            <br><br>
-            <input type="submit" value="Enviar" class="frm-elm btn">
+        <div class="grid-container">
+
+        <div class="header"> 
+            <a href="index.html"><p class="title">JYF</p></a>
+            <ul>
+                <a href="catalogo.html"><li>Catalogo</li></a>
+                <a href="personalizar.html"><li>Personalizar</li></a>
+                <a href="comentarios.html"><li>Comentarios</li></a>
+            </ul>
+
+            <div class="search">
+                <span class="ico-search"><img src="img/icons/search.png" width="12px" height="12px"> Buscar:</span>
+                <input type="text" name="busqueda" autocomplete="off">
+
+            </div> 
             
-        </form>
-        <a href="index.html"><button class="frm-elm btn-v">Volver</button></a>
+        </div>
 
+        <div class="main-grid">
+            <p class="titulo">¡Forma parte del sitio en linea!</p>
+                <div class="frm">
+                    <form>
+                        <p class="frm-info">Nombre: </p>
+                        <input type="text" name="name:" placeholder="Nombre" class="frm-elm" required>
+                        <br>
+                        <p class="frm-info">Apellido: </p>
+                        <input type="text" name="last-name" placeholder="Apellido" class="frm-elm" required>
+                        <br>
+                        <p class="frm-info">Dirección:</p>
+                        <input type="text" placeholder="Dirección" class="frm-elm" required> 
+                        <br><br>
+                        <input type="submit" value="Enviar" class="btns">
+                    </form>   
+            </div>
+            <a href="index.html" class="btn-volver"><button class="btns" style="margin-top: -10px !important;">Volver</button></a>
+    </div>
+
+
+        <div class="footer-grid frm-page">
+            <p>Creada con 😎 por Pablo Rosas Marin</p>
+        </div>
 
     </div>
+
+    </main>
+    <footer>
+        <div class="block"><p>Puede consultar esta p&aacute;gina en la url http://tienda.com</p></div>
+        
+    </footer>
 </body>
+
 </html>

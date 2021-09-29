@@ -10,11 +10,11 @@
 <body>
     <div class="grid-container">
         <div class="header"> 
-            <p class="title">JYF</p>
+            <a href="index.html"><p class="title">JYF</p></a>
             <ul>
+                <a href="index.html"><li>Inicio</li></a>
                 <a href="catalogo.html"><li>Catalogo</li></a>
                 <a href="personalizar.html"><li>Personalizar</li></a>
-                <a href="comentarios.html"><li>Comentarios</li></a>
             </ul>
 
             <div class="search">
@@ -26,31 +26,35 @@
         </div>
 
         <div class="main-grid">
-            <p class="titulo">¡Envianos tus comentarios! <br>Por favor rellena los campos requeridos (fondo rojo) </p>
+            <h1 class ="grnd">¡Envianos tus comentarios! <br></h1>
+            <p class="titulo">Por favor rellena los campos requeridos (fondo rojo) </p>
                 <div class="frm">
-                    
                     <form class="">
-                        <p class="frm-info">Correo: </p>
+                        <p class="frm-elm frm-info">Correo: </p>
                         <input type="email" name="Email:" id="" class="frm-elm">
                         <br>
-                        <p class="frm-info">Nombre: </p>
-                        <input type="text" name="" id="" required>
+                        <p class="frm-elm frm-info">Nombre: </p>
+                        <input type="text" name="" id="" required class="frm-elm">
                         <br>
-                        <p class="frm-info">Asunto: </p>
-                        <input type="text" name="" id="" required>
+                        <p class="frm-elm frm-info">Asunto: </p>
+                        <input type="text" name="" id="" required class="frm-elm">
                         <br>
-                        <p class="frm-info">Descripción del problema:</p>
-                        <textarea rows="10" cols="30" placeholder="Ingrese un comentario"></textarea>
+                        <p class="frm-elm frm-info">Descripción del problema:</p>
+                        <textarea rows="10" cols="30" placeholder="Ingrese un comentario" class="frm-elm"></textarea>
                         <br>
-                        <input type="submit" value="Enviar">
+                        <input type="submit" class="btns" value="Enviar">
+                        <div class="inv"></div>
                     </form>
-                    
             </div>
-            <a href="index.html"><button class="frm-elm btn-v" onclick="none">Volver</button></a>
+            <a href="index.html"><button class="btns btn-volver" onclick="none">Volver</button></a>
     </div>
-    <div class="footer-grid">
+    <div class="footer-grid ndisplay">
         <p>Creada con 😎 por Pablo Rosas Marin</p>
     </div>
     </div>
+    <footer>
+        <div class="block"><p>Puede consultar esta p&aacute;gina en la url http://tienda.com</p></div>
+        
+    </footer>
 </body>
 </html>
