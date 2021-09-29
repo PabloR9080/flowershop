@@ -10,6 +10,9 @@
 body{
     background-image: url(img/backgrev.jpg);
 }
+a{
+    text-decoration:none;
+}
 .grid-container{
     display: grid;
     grid-template-areas: 
@@ -63,7 +66,7 @@ body{
 .ico-search{
     margin-right: -2px;
 }
-input[type="text"]{
+input[type="text"], input[type="email"]{
     border: 2px solid #121212;
     height: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -84,7 +87,13 @@ input[type="text"]:focus{
     margin-left: 5px;
     font-size: 15px;
 }
-
+.grnd{
+    color:#141414;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 2;
+}
 .main-grid{
     grid-area: contentg;
     height: 70vh;
@@ -107,8 +116,8 @@ input[type="text"]:focus{
     margin-top: 8%;
     margin-left: 30%;
     width: 40%;
-    height: 25%;
-    overflow-y: scroll;
+    height: 32%;
+    overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.2);
     transition: all 200ms ease-in-out;
     border-bottom: 0px solid black;
@@ -197,34 +206,58 @@ input[type="text"]:focus{
 }
 
 .frm{
+    margin-left: 24.5%;
     display: flex;
     flex-flow: row wrap;
-    border: 2px solid black;
+    height: 60%;
+    width: 50%;
+    padding: 10px;
     justify-content: center;
     align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    overflow: auto;
 }
 .frm > form >p.frm-info{
     color:#141414;
+    font-size: 28px;
     font-weight: 600;
     line-height: 2;
 }
 .frm textarea{
     resize: none;
     width: 400px;
+    padding: 5px;
 }
+
 .frm :required{
     background-color: rgba(255, 0, 0, 0.5)
 }
+.frm-elm{
+    flex-grow: 1;
+    border-radius: 5%;
+    
+}
+.btn-volver{
+    text-align: center;
+    margin-left: 44.6%;
+}
+.btns{
+    cursor: pointer;
+    color:#ffffff;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 60px;
+    height: 40px;
+    
+}
+
 .titulo{
     color: #141414;
     text-align: center;
     font-weight: 500;
-    font-size: 20px;
-}
-.titulo::first-line{
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 2;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 .footer-grid{
     display: flex;
@@ -240,17 +273,62 @@ input[type="text"]:focus{
 }
 
 .block{
-    display: none;
-    
+    display: none;  
+}
+.frm-perso{
+    height: 90%;
+    width: 70%;
+    margin-left: 14%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    overflow: auto;
 }
 
-.scrll::-webkit-scrollbar {
-    width: 5px; 
-  }
-.scrll::-webkit-scrollbar-thumb {
-    background: #141414;
-    border-radius: 10%;
-  }
+.flores{
+    float: left;
+    margin-right: 10px;
+}
+input[type=radio].flores{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+input[type=radio].flores + img {
+    cursor: pointer;
+    margin-left: 1%;
+}
+input[type=radio].flores:checked + img {
+    outline: 5px solid #121212;
+}
+h2.flwr-dscrpt{
+    text-align: center;
+    color: #6c36c4;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3;
+}
+p.flwr-dscrpt{
+    color:#141414;
+    width: 70%;
+    padding: 3%;
+    margin-left: 14%;
+    margin-bottom: 2%;
+    text-align: left;
+    line-height: 2;
+    font-size: 1.5em;
+    background-color: white;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    min-height: 25vh;
+    max-height: 20vh;
+    overflow-y: auto;
+}
 
 @media print{
     .block{
@@ -258,7 +336,7 @@ input[type="text"]:focus{
         display: flex;
         
 
-        font-size: 10px;
+        font-size: 15px;
         font-weight: 500;
     }
     
@@ -267,7 +345,11 @@ input[type="text"]:focus{
 @media only screen 
   and (min-device-width: 360px) 
   and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (-webkit-min-device-pixel-ratio: 1) 
+  and (min-device-height: 350px){
+    .ndisplay{
+        display: none;
+    }
     .grid-container{
         width: 100vw;
     }
@@ -300,7 +382,7 @@ input[type="text"]:focus{
     .main-grid  .bttns{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
         justify-content: center;
         align-items: center;
     }
@@ -313,8 +395,8 @@ input[type="text"]:focus{
     }
 
     .bttns li{
-        margin-top: 8vmin;
-        margin-bottom: 5vmin;
+        flex-grow: 1;
+        margin-top: 6vmin;
         font-weight: bolder;
         font-size: 2.5vmax;
     }
@@ -361,5 +443,19 @@ input[type="text"]:focus{
         margin-top: 10px;
         margin-bottom: 2%;
       }
-    
+    .frm{
+        margin-left: 0;
+        width: auto;
+        overflow: auto;
+    }  
+    .inv{
+        margin-top: 10px;
+        height: 50px;
+        width: 10px;
+    }
+    .flores img{
+        width: 30%;
+        height: 30%;
+        margin-top: 10px;
+    }
 }
